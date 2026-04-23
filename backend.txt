@@ -1,0 +1,66 @@
+backend/
+└── src/
+    └── main/
+        ├── java/
+        │   └── com/example/flashcardfrenzy/
+        │       ├── auth/
+        │       │   ├── AuthController.java        // Controller — /auth/register, /login, /logout
+        │       │   ├── AuthService.java           // Service
+        │       │   └── dto/
+        │       │       ├── RegisterRequest.java   // DTO
+        │       │       ├── LoginRequest.java      // DTO
+        │       │       └── AuthResponse.java      // DTO
+        │       │
+        │       ├── user/
+        │       │   ├── User.java                  // Entity
+        │       │   ├── UserRepository.java        // Repository
+        │       │   └── UserRole.java              // Enum: USER, ADMIN
+        │       │
+        │       ├── deck/
+        │       │   ├── DeckController.java        // Controller — /decks
+        │       │   ├── DeckService.java           // Service
+        │       │   ├── DeckRepository.java        // Repository
+        │       │   ├── Deck.java                  // Entity
+        │       │   └── dto/
+        │       │       ├── DeckRequest.java       // DTO
+        │       │       └── DeckResponse.java      // DTO
+        │       │
+        │       ├── flashcard/
+        │       │   ├── FlashcardController.java   // Controller — /decks/{id}/cards, /cards/{cardId}
+        │       │   ├── FlashcardService.java      // Service
+        │       │   ├── FlashcardRepository.java   // Repository
+        │       │   ├── Flashcard.java             // Entity
+        │       │   └── dto/
+        │       │       ├── FlashcardRequest.java  // DTO
+        │       │       └── FlashcardResponse.java // DTO
+        │       │
+        │       ├── quiz/
+        │       │   ├── QuizController.java        // Controller — /quizzes/results, /history
+        │       │   ├── QuizService.java           // Service
+        │       │   ├── QuizRepository.java        // Repository
+        │       │   ├── QuizResult.java            // Entity
+        │       │   └── dto/
+        │       │       ├── QuizResultRequest.java  // DTO
+        │       │       └── QuizResultResponse.java // DTO
+        │       │
+        │       ├── admin/
+        │       │   ├── AdminController.java       // Controller — /admin/stats, /users
+        │       │   ├── AdminService.java          // Service
+        │       │   └── dto/
+        │       │       └── AdminStatsResponse.java // DTO
+        │       │
+        │       ├── common/
+        │       │   ├── ApiResponse.java           // Standard response wrapper (success, data, error, timestamp)
+        │       │   ├── ErrorResponse.java         // Error code + message + details
+        │       │   └── GlobalExceptionHandler.java // Maps exceptions to error codes (AUTH-001, DB-001…)
+        │       │
+        │       └── security/
+        │           ├── SecurityConfig.java        // Spring Security filter chain
+        │           ├── JwtUtil.java               // Generate/validate JWT
+        │           ├── JwtAuthFilter.java         // Reads Bearer token per request
+        │           └── UserDetailsServiceImpl.java // Security
+        │
+        └── resources/
+            └── application.properties            // DB URL, JWT secret, bcrypt rounds
+            
+pom.xml

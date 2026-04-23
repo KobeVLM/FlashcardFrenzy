@@ -1,0 +1,74 @@
+app/
+└── src/
+    └── main/
+        ├── java/
+        │   └── com/example/flashcardfrenzy/
+        │       ├── auth/
+        │       │   ├── login/
+        │       │   │   ├── LoginActivity.kt        // View
+        │       │   │   ├── LoginContract.kt        // Contract
+        │       │   │   └── LoginPresenter.kt       // Presenter
+        │       │   └── register/
+        │       │       ├── RegisterActivity.kt     // View
+        │       │       ├── RegisterContract.kt     // Contract
+        │       │       └── RegisterPresenter.kt    // Presenter
+        │       │
+        │       ├── deck/
+        │       │   ├── DeckListActivity.kt         // View
+        │       │   ├── DeckListContract.kt         // Contract
+        │       │   ├── DeckListPresenter.kt        // Presenter
+        │       │   ├── DeckDetailActivity.kt       // View
+        │       │   ├── DeckDetailContract.kt       // Contract
+        │       │   └── DeckDetailPresenter.kt      // Presenter
+        │       │
+        │       ├── flashcard/
+        │       │   ├── FlashcardActivity.kt        // View
+        │       │   ├── FlashcardContract.kt        // Contract
+        │       │   └── FlashcardPresenter.kt       // Presenter
+        │       │
+        │       ├── quiz/
+        │       │   ├── QuizActivity.kt             // View
+        │       │   ├── QuizContract.kt             // Contract
+        │       │   ├── QuizPresenter.kt            // Presenter
+        │       │   ├── QuizResultActivity.kt       // View
+        │       │   ├── QuizResultContract.kt       // Contract
+        │       │   └── QuizResultPresenter.kt      // Presenter
+        │       │
+        │       ├── data/
+        │       │   ├── model/
+        │       │   │   ├── User.kt                 // Entity
+        │       │   │   ├── Deck.kt                 // Entity
+        │       │   │   ├── Flashcard.kt            // Entity
+        │       │   │   └── QuizResult.kt           // Entity
+        │       │   │
+        │       │   ├── repository/
+        │       │   │   ├── AuthRepository.kt       // Repository
+        │       │   │   ├── DeckRepository.kt       // Repository
+        │       │   │   ├── FlashcardRepository.kt  // Repository
+        │       │   │   └── QuizRepository.kt       // Repository
+        │       │   │
+        │       │   └── network/
+        │       │       ├── ApiService.kt           // Network
+        │       │       ├── RetrofitClient.kt      // Network
+        │       │       └── AuthInterceptor.kt     // Attaches JWT to every request
+        │       │
+        │       └── util/
+        │           ├── SessionManager.kt          // Stores/reads JWT from SharedPreferences
+        │           └── Constants.kt               // Base URL, shared keys
+        │
+        └── res/
+            ├── layout/
+            │   ├── activity_login.xml
+            │   ├── activity_register.xml
+            │   ├── activity_deck_list.xml
+            │   ├── activity_deck_detail.xml
+            │   ├── activity_flashcard.xml
+            │   ├── activity_quiz.xml
+            │   ├── activity_quiz_result.xml
+            │   ├── item_deck.xml
+            │   └── item_flashcard.xml
+            │
+            └── values/
+                ├── strings.xml
+                ├── colors.xml
+                └── themes.xml
