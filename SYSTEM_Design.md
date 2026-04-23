@@ -19,11 +19,11 @@
 - **ORM:** Spring Data JPA
 - **Build Tool:** Maven
 - **Dependencies in use:**
-- Spring Data JPA Starter
-- Spring Boot Validation Starter
-- Spring Boot Web MVC Starter
-- PostgreSQL JDBC Driver
-- Project Lombok
+  - Spring Data JPA Starter
+  - Spring Boot Validation Starter
+  - Spring Boot Web MVC Starter
+  - PostgreSQL JDBC Driver
+  - Project Lombok
  
 ### Database
 - **Engine:** PostgreSQL 14+
@@ -39,9 +39,15 @@
  
 ### Mobile
 - **Language:** Kotlin
-- **UI:** Jetpack Compose
+- **Architecture:** MVP (Model-View-Presenter)
+- **UI:** XML Layouts with View Binding
 - **HTTP Client:** Retrofit
 - **Min Android API Level:** 24 (Android 7.0+)
+- **MVP Structure:**
+  - **Model** — Data classes, Repository classes, and Retrofit API calls (e.g., `DeckRepository`, `FlashcardRepository`)
+  - **View** — `Activity` / `Fragment` classes that implement a `View` contract interface (e.g., `DeckListActivity : DeckListContract.View`)
+  - **Presenter** — Plain Kotlin classes that hold a reference to the View interface and contain all presentation logic (e.g., `DeckListPresenter(view: DeckListContract.View)`)
+  - **Contract Interface** — Each screen defines a `Contract` interface with nested `View` and `Presenter` interfaces to enforce the MVP boundary
  
 ### Deployment
 - **Backend:** Railway or Heroku
@@ -53,6 +59,7 @@
 ## Architecture
  
 - **Pattern:** Three-tier architecture (Backend API → Web Frontend + Android App)
+- **Mobile Pattern:** MVP (Model-View-Presenter)
 - **Communication:** RESTful APIs, JSON only
 - **Base URL:** `/api/v1`
 - **Auth mechanism:** Bearer token (JWT) in `Authorization` header
@@ -65,14 +72,14 @@
 All responses must follow this structure:
 ```json
 {
-"success": boolean,
-"data": object | null,
-"error": {
-"code": string,
-"message": string,
-"details": object | null
-},
-"timestamp": string
+  "success": boolean,
+  "data": object | null,
+  "error": {
+    "code": string,
+    "message": string,
+    "details": object | null
+  },
+  "timestamp": string
 }
 ```
  
@@ -190,26 +197,3 @@ quiz_results: id, user_id, deck_id, score, time_spent, date_taken
 - **Browsers:** Chrome, Firefox, Safari, Edge (latest 2 versions)
 - **OS:** Windows 10+
 - **Screen sizes:** Mobile (360px+), Tablet (768px+), Desktop (1024px+)
-Constraints
-- All communications must use **HTTPS**
-- Passwords must be hashed with **bcrypt** (salt rounds = 12)
-- Admin-prefixed endpoints must enforce **role verification**
-- Must implement **SQL injection prevention** and **XSS protection**
-- JWT tokens must be used for all authenticated sessions
- 
----
- 
-## Features In Scope
-- User registration and authentication (email/password only)
-- Deck listing with search functionality
-- Flashcard CRUD (add, update, delete)
-- Quiz session and scoring
-- Responsive web interface
-- Native Android mobile application
-- Admin panel (user management + system stats)
- 
-Features Out of Scope (Do NOT implement)
-- Social media / OAuth login
-- Payment gateway integration
-- Push notifications
-- Advanced collaboration tools
