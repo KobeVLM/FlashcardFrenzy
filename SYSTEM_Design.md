@@ -36,6 +36,9 @@
 - **Styling:** Tailwind CSS
 - **HTTP Client:** Axios
 - **Build Tool / Bundler:** Vite (for improved performance and fast builds)
+- **Styling:** Tailwind CSS
+- **Component Library:** shadcn/ui  ← ADD HERE
+- **HTTP Client:** Axios
  
 ### Mobile
 - **Language:** Kotlin
