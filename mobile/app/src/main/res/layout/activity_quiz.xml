@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Required IDs: tv_progress, tv_question, tv_answer, btn_reveal, btn_correct, btn_wrong -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:padding="24dp" android:gravity="center">
+    <TextView android:id="@+id/tv_progress" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:text="Card 1 / 10" android:gravity="center" />
+    <TextView android:id="@+id/tv_question" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:textSize="20sp"
+        android:gravity="center" android:padding="16dp" />
+    <Button android:id="@+id/btn_reveal" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:text="Show Answer" />
+    <TextView android:id="@+id/tv_answer" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:textSize="18sp"
+        android:gravity="center" android:padding="16dp" android:visibility="gone" />
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button android:id="@+id/btn_correct" android:layout_width="0dp"
+            android:layout_height="wrap_content" android:layout_weight="1"
+            android:text="Got it ✓" android:visibility="gone" />
+        <Button android:id="@+id/btn_wrong" android:layout_width="0dp"
+            android:layout_height="wrap_content" android:layout_weight="1"
+            android:text="Missed ✗" android:visibility="gone" />
+    </LinearLayout>
+</LinearLayout>

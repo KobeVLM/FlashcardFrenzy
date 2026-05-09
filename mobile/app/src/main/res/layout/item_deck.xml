@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Required IDs: tv_deck_title, tv_deck_category, tv_owner_name -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:orientation="vertical" android:padding="16dp">
+    <TextView android:id="@+id/tv_deck_title"    android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="16sp" />
+    <TextView android:id="@+id/tv_deck_category" android:layout_width="match_parent" android:layout_height="wrap_content" />
+    <TextView android:id="@+id/tv_owner_name"    android:layout_width="match_parent" android:layout_height="wrap_content" />
+</LinearLayout>
