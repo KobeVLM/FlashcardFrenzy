@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Required IDs: et_question, et_answer, et_tags, btn_save, progress_bar -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:padding="24dp">
+    <EditText android:id="@+id/et_question" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:hint="Question *"
+        android:minLines="3" android:gravity="top" />
+    <EditText android:id="@+id/et_answer" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:hint="Answer *"
+        android:minLines="3" android:gravity="top" />
+    <EditText android:id="@+id/et_tags" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:hint="Tags — comma separated e.g. math,algebra" />
+    <Button android:id="@+id/btn_save" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:text="Save Card" />
+    <ProgressBar android:id="@+id/progress_bar" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:visibility="gone" />
+</LinearLayout>

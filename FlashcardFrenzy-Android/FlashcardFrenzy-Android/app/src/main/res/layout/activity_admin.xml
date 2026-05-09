@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Required IDs: tv_total_users, tv_total_decks, tv_total_cards, tv_total_quizzes, rv_users, progress_bar -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:padding="16dp">
+    <TextView android:id="@+id/tv_total_users"   android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Users: —" />
+    <TextView android:id="@+id/tv_total_decks"   android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Decks: —" />
+    <TextView android:id="@+id/tv_total_cards"   android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Cards: —" />
+    <TextView android:id="@+id/tv_total_quizzes" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Quizzes: —" />
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/rv_users"
+        android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" />
+    <ProgressBar android:id="@+id/progress_bar" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:layout_gravity="center" android:visibility="gone" />
+</LinearLayout>
